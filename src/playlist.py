@@ -42,7 +42,6 @@ class PlayList(Channel):
 
         return sum_duration
 
-    @property
     def show_best_video(self):
         """
         Возвращает ссылку на самое популярное(по лайкам) видео из плейлиста
@@ -53,6 +52,3 @@ class PlayList(Channel):
                 max_likes = video["statistics"]["likeCount"]
         return f"https://youtu.be/{video['id']}"
 
-
-pl = PlayList('PLv_zOGKKxVpj-n2qLkEM2Hj96LO6uqgQw')
-print(pl.get_playlist_videos())
